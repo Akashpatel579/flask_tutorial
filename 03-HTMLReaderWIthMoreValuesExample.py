@@ -4,7 +4,9 @@ app = Flask(__name__)
 
 @app.route("/<name>")
 def home(name):
-    return render_template("index_multiple_Values.html", username = name, email= "abc@myemail.com" )
+    return render_template("index_more_Values.html",
+                           name = name,
+                           users = ["Derek", "Joe", "Rich"] )
 
 if __name__ == "__main__":
     app.run()
